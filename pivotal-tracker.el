@@ -129,6 +129,11 @@
           (match-string 1)))
   (pivotal-get-current))
 
+(defun pivotal-set-current-story ()
+  (interactive)
+  (custom-set-variables '(pivotal-current-task-id "1234"))
+  (customize-save-customized))
+
 (defun pivotal-get-story (id)
   "Open a single story for view / edit"
   (interactive)
