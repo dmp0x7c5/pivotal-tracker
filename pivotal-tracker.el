@@ -129,7 +129,7 @@
           (match-string 1)))
   (pivotal-get-current))
 
-(defun pivotal-set-current-story ()
+(defun pivotal-save-current-task-id ()
   (interactive)
   (custom-set-variables '(pivotal-current-task-id (pivotal-story-id-at-point))
   (customize-save-customized)))
@@ -318,6 +318,7 @@
   (define-key pivotal-mode-map (kbd "N") 'pivotal-next-iteration)
   (define-key pivotal-mode-map (kbd "P") 'pivotal-previous-iteration)
   (define-key pivotal-mode-map (kbd "E") 'pivotal-estimate-story)
+  (define-key pivotal-mode-map (kbd "c") 'pivotal-save-current-task-id)
   (define-key pivotal-mode-map (kbd "C") 'pivotal-add-comment)
   (define-key pivotal-mode-map (kbd "S") 'pivotal-set-status)
   (define-key pivotal-mode-map (kbd "O") 'pivotal-set-owner)
