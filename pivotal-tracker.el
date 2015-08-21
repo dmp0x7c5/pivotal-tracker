@@ -131,7 +131,7 @@
 
 (defun pivotal-set-current-story ()
   (interactive)
-  (custom-set-variables '(pivotal-current-task-id "1234"))
+  (custom-set-variables '(pivotal-current-task-id (pivotal-story-id-at-point))
   (customize-save-customized))
 
 (defun pivotal-get-story (id)
