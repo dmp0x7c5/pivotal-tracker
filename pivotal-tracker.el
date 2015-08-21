@@ -60,7 +60,7 @@
 
 (macroexpand `(namespace foo (fu bar) (quote fu bar baz)))
 
-(defconst pivotal-base-url "https://www.pivotaltracker.com/services/v5"
+(defconst pivotal-base-url "https://www.pivotaltracker.com/services/v3"
   "format string to use when creating endpoint urls")
 
 (defconst pivotal-states `("unstarted" "started" "finished" "delivered" "accepted" "rejected")
