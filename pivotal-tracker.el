@@ -131,8 +131,8 @@
 
 (defun pivotal-save-current-task-id ()
   (interactive)
-  (custom-set-variables '(pivotal-current-task-id (pivotal-story-id-at-point))
-  (customize-save-customized)))
+  (customize-set-variable 'pivotal-current-task-id (pivotal-story-id-at-point))
+  (customize-save-customized))
 
 (defun pivotal-get-story (id)
   "Open a single story for view / edit"
