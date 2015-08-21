@@ -132,7 +132,7 @@
 (defun pivotal-set-current-story ()
   (interactive)
   (custom-set-variables '(pivotal-current-task-id (pivotal-story-id-at-point))
-  (customize-save-customized))
+  (customize-save-customized)))
 
 (defun pivotal-get-story (id)
   "Open a single story for view / edit"
