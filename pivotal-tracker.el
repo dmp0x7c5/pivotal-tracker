@@ -47,6 +47,11 @@
   (defcustom pivotal-api-token ""
     "API key found on the /profile page of pivotal tracker"
     :group 'pivotal
+    :type 'string)
+
+  (defcustom pivotal-current-task-id ""
+    "Task of the current active task in Pivotal"
+    :group 'pivotal
     :type 'string))
 
 (defmacro namespace (ns-name symbols-to-namespace &rest body)
@@ -55,7 +60,7 @@
 
 (macroexpand `(namespace foo (fu bar) (quote fu bar baz)))
 
-(defconst pivotal-base-url "https://www.pivotaltracker.com/services/v3"
+(defconst pivotal-base-url "https://www.pivotaltracker.com/services/v5"
   "format string to use when creating endpoint urls")
 
 (defconst pivotal-states `("unstarted" "started" "finished" "delivered" "accepted" "rejected")
